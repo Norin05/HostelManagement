@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+    <link rel="stylesheet" href="compform.css">
+</head>
+<body>
+    <div class="form-container">
+        <form onsubmit="handleFormSubmission(event)">
+            <h1>Complaint Form</h1>
+
+            <div class="input-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+            <div class="input-group">
+                <label for="enrollment-id">Enrollment ID</label>
+                <input type="text" id="enrollment-id" name="enrollment-id" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <h2>Hostel Information</h2>
+            <div class="input-group">
+                <label for="hostel-number">Hostel Number</label>
+                <select id="hostel-number" name="hostel-number" required>
+                    <option value="H1">H1</option>
+                    <option value="H2">H2</option>
+                    <option value="H3">H3</option>
+                    <option value="H4">H4</option>
+                    <option value="H5">H5</option>
+                    <option value="H6">H6</option>
+                    <option value="H7">H7</option>
+                    <option value="H8">H8</option>
+                    <option value="H9">H9</option>
+                    <option value="H10">H10</option>
+                    <option value="H11">H11</option>
+                    <option value="H12">H12 (Geeta Bhawan)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="room-number">Room Number</label>
+                <input type="text" id="room-number" name="room-number" required>
+            </div>
+
+            <h2>Complaint</h2>
+            <div class="complaint-group">
+                <input type="radio" id="electrical" name="complaint" value="electrical" required>
+                <label for="electrical">Electrical</label><br>
+                <input type="radio" id="plumber" name="complaint" value="plumber" required>
+                <label for="plumber">Plumber</label><br>
+                <input type="radio" id="gardener" name="complaint" value="gardener" required>
+                <label for="gardener">Gardener</label><br>
+                <input type="radio" id="general" name="complaint" value="general" required>
+                <label for="general">General</label>
+            </div>
+
+            <h2>Description</h2>
+            <div class="input-group">
+                <textarea id="description" name="description" rows="6" cols="90" required></textarea>
+            </div>
+
+            <h2>Availability</h2>
+            <div class="input-group">
+                <label for="availability-date">Date</label>
+                <input type="date" id="availability-date" name="availability-date" required>
+            </div>
+            <div class="input-group">
+                <label for="availability-time">Time</label>
+                <input type="time" id="availability-time" name="availability-time" required>
+            </div>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="message" style="display: none; text-align: center; margin-top: 80px; color:#ffcc00;">
+        <p>Your complaint has been submitted successfully!</p>
+    </div>
+
+    <script>
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            document.getElementById('message').style.display = 'block';
+            document.querySelector('.form-container').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

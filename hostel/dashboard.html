@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fef4e9;
+            color: #5A4D41; 
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .sidebar {
+            width: 50px;
+            position: fixed;
+            height: 100%;
+            background-color:#5A4D41; 
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+        
+        .sidebar ul li img {
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: auto;
+        }
+        
+        .sidebar ul li a:hover img {
+            filter: brightness(1.5);
+        }
+        
+        .main-content {
+            margin-left: 80px;
+            flex-grow: 1;
+            padding: 40px 100px 0px 100px;
+            overflow: auto;
+        }
+        
+        .admin-container {
+            display: flex;
+        }
+        
+        .service-card,
+        .form-card {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 15px;
+            width: 70%;
+            align-items: center;
+            height: max-content;
+            box-sizing: border-box;
+            text-align: left;
+            background: linear-gradient(135deg, #F9C1A3, #FFD4A3);
+            color: #5A4D41;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.189);
+            flex-shrink: 0;
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .service-card a {
+            text-decoration: none;
+            color: #5A4D41;
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .room-allocation {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2%;
+            width: 100%;
+        }
+        
+        .hostel-card {
+            background-color: #FFD4A3;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            flex: 1;
+            box-sizing: border-box;
+            text-align: center;
+            color: #5A4D41;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.189);
+            flex-shrink: 0;
+        }
+        
+        .hostel-card:nth-child(2) {
+            background-color: #F9C1A3;
+            color: #5A4D41;
+        }
+        
+        .form-card {
+            width: auto;
+            text-align: center;
+        }
+        
+        .form-card a.button {
+            text-align: center;
+            height: fit-content;
+            text-decoration: none;
+            color: #F9C1A3;
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 8px;
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: #FFE5B4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .form-card a.button:hover {
+            background-color: #F9C1A3;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#servic-card"><img src="IMAGE/profile.png" alt="User Icon"></a></li>
+                <li><a href="#room-allocation"><img src="IMAGE/hostel.png" alt="Hostel Icon"></a></li>
+                <li><a href="disp.php"><img src="IMAGE/form.png" alt="Complaints Icon"></a></li>
+                <li><a href="login.html"><img src="IMAGE/logout.png" alt="Logout Icon"></a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+
+            <div class="admin-container">
+                <div class="service-card">
+                    <div class="service-card-text">
+                        <h2>Admin</h2>
+                        <p>Admin Name</p>
+                        <p>Email id </p>
+                    </div>
+                    <div class="service-card-image"><img src="IMAGE/sherlock.png" alt="Admin Image"></div>
+                    
+                </div>
+
+                <!-- Room Allocation Cards -->
+                <div id="room-allocation" class="room-allocation">
+                    <div id="room-number" class="hostel-card">
+                        <h3>Number of rooms</h3>
+                        <p>159</p>
+                        <p>49(s) 100(d) 10(t)</p>
+                    </div>
+                    <div id="floor-number" class="hostel-card">
+                        <h3>Number of students</h3>
+                        <p>99</p>
+                    </div>
+                    <div id="room-type" class="hostel-card">
+                        <h3>Occupied/Total</h3>
+                        <p>a/b</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="new-complaints" class="form-card">
+                <h3 class="card-title">New Complaints</h3>
+                <p class="card-description">Review the latest complaint details quickly.</p>
+                <a href="disp.html" class="button button-primary">View Complaints</a>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

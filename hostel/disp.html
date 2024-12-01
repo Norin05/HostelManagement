@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Complaints</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #ffcc00;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+        h2 {
+            margin-top: 30px;
+            text-align: center;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Submitted Complaints</h2>
+
+    <table>
+        <tr>
+            <th>Full Name</th>
+            <th>Enrollment ID</th>
+            <th>Email</th>
+            <th>Hostel Number</th>
+            <th>Room Number</th>
+            <th>Complaint Type</th>
+            <th>Description</th>
+            <th>Availability Date</th>
+            <th>Availability Time</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>123456</td>
+            <td>john.doe@example.com</td>
+            <td>1</td>
+            <td>101</td>
+            <td>Plumbing</td>
+            <td>Leaking tap in the bathroom.</td>
+            <td>2024-12-05</td>
+            <td>10:00 AM</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>789012</td>
+            <td>jane.smith@example.com</td>
+            <td>2</td>
+            <td>202</td>
+            <td>Electricity</td>
+            <td>Frequent power outages.</td>
+            <td>2024-12-06</td>
+            <td>2:00 PM</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
